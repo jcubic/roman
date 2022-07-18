@@ -1,12 +1,4 @@
 
-const table = {
-    1: "I",
-    5: "V",
-    10: "X",
-    50: "L",
-    100: "C"
-}
-
 const fives = ["V", "L", "D"];
 const tens = ["X", "C", "M"];
 const onces = ["I", "X", "C", "M"];
