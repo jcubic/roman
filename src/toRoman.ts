@@ -11,10 +11,14 @@ function isFiveMultipler(num: number) {
     return num % 5 === 0 && num.toString()[0] == "5";
 }
 
-const toRoman = (arabic: number) => {
-    const numbers = arabic.toString().split('').reverse().map((num, i) => {
+function splitToPowers(num: number) {
+    return num.toString().split('').reverse().map((num, i) => {
         return Number(num) * (10 ** i);
     }).reverse();
+}
+
+const toRoman = (arabic: number) => {
+    const numbers = splitToPowers(arabic);
     return numbers.reduce<string[]>((acc, num) => {
         let result;
         const str = num.toString();
