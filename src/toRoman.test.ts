@@ -32,11 +32,14 @@ describe('toRoman', () => {
         [800, "DCCC"],
         [900, "CM"],
         [1000, "M"],
+        [1025, "MXXV"],
+        [1164, "MCLXIV"],
         [1980, "MCMLXXX"],
         [1999, "MCMXCIX"],
         [2000, "MM"],
         [2022, "MMXXII"],
         [3000, "MMM"],
+        [3888, "MMMDCCCLXXXVIII"]
     ])('should convert number %s to "%s"', (int: number, roman: string) => {
         expect(toRoman(int)).toEqual(roman);
     });
