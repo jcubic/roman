@@ -8,7 +8,7 @@ function isTenMultipler(num: number) {
 }
 
 function isFiveMultipler(num: number) {
-    return num % 5 === 0 && num.toString()[0] == "5";
+    return num % 5 === 0 && num.toString()[0] === "5";
 }
 
 function splitToPowers(num: number) {
