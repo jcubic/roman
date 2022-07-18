@@ -1,5 +1,7 @@
 import { useState, ChangeEvent } from 'react';
 
+import toRoman from './toRoman';
+
 const ReactConverter = () => {
     const [roman, setRoman] = useState<string>('none');
     const convertToRoman = (e: ChangeEvent<HTMLInputElement>) => {
@@ -7,6 +9,7 @@ const ReactConverter = () => {
         if (!arabic) {
             setRoman('none');
         }
+        setRoman(toRoman(arabic));
     };
     return (
         <>
